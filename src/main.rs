@@ -47,8 +47,8 @@ enum Commands {
         #[clap(long, value_name = "ADDRESS")]
         address: Address,
 
-        /// CKB indexer rpc url
-        #[clap(long, value_name = "URL", default_value = "http://127.0.0.1:8116")]
+        /// CKB indexer rpc url (also CKB rpc url)
+        #[clap(long, value_name = "URL", default_value = "https://testnet.ckbapp.dev")]
         ckb_indexer_rpc: String,
     },
     /// Query the transaction status
@@ -58,7 +58,7 @@ enum Commands {
         tx_hash: H256,
 
         /// CKB rpc url
-        #[clap(long, value_name = "URL", default_value = "http://127.0.0.1:8114")]
+        #[clap(long, value_name = "URL", default_value = "https://testnet.ckbapp.dev")]
         ckb_rpc: String,
     },
     /// Transfer some CKB from one sighash address to other address
@@ -76,7 +76,7 @@ enum Commands {
         capacity: HumanCapacity,
 
         /// CKB rpc url
-        #[clap(long, value_name = "URL", default_value = "http://127.0.0.1:8114")]
+        #[clap(long, value_name = "URL", default_value = "https://testnet.ckbapp.dev")]
         ckb_rpc: String,
     },
 }
